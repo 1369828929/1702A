@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bawei.mapper.MovieMapper" >
+<!-- 	<select id="getList" resultType="map">
+		SELECT * FROM movie_611 a LEFT JOIN nd_611 b ON a.did = b.did WHERE 1 = 1 AND mname LIKE '%#{mname}%' AND dname LIKE '%#{dname}%'
+		<if test="dida>0">
+			AND a.did = ${dida}
+		</if>
+			AND stime BETWEEN #{startTime} AND #{endTime} AND price BETWEEN ${minPrice} AND ${maxPrice} AND shour BETWEEN ${shotTime} AND ${longTime}
+	</select> -->
+	
+	<select id="getList" resultType="map">
+	SELECT * FROM movie_611 a LEFT JOIN nd_611 b ON a.did = b.did WHERE 1 = 1
+	</select>
+	<delete id="delete">
+		delete from movie_611 where id=${id}
+	</delete>
+</mapper>
